@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+    <title>MOTO´S DATA BASES</title>
+</head>
+
+<body style="background-color:#e7e5e5">
+    <script type="text/javascript">
+        window.onload = traerInformacionCategoria();
+    </script>
+
+    <div class="container">
+        <div class="row" style="background-color:#135C55">
+            <div class="d-flex justify-content-center">
+                <h1 style="color:white">MOTO´S DATA BASES</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="background-color:#23A89B">
+            <div class="d-flex justify-content-center">
+                <h3 style="color:white">CATEGORY MANAGER</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="background-color: white; padding-bottom: 15px;">
+        <div class="row" style="margin-top: 10px !important; padding-bottom: 15px !important;">
+            <div class="d-flex justify-content-center">
+                <div class="col-md-2">
+                    <div class="d-flex justify-content-center">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="./images/logo.png" alt="" style="height: 100px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="d-flex justify-content-center">
+                        <div class="col-md-12" id="resultado1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="background-color: white;">
+            <div class="row" style="margin-top: 10px !important; padding-bottom: 15px !important;">
+                <div class="d-flex justify-content-center">
+                    <div class="form-group col-md-1" style="margin:3px !important;">
+                        <label for="idCategoria">COD</label>
+                        <input type="number" class="form-control" id="idCategoria" disabled="disabled">
+                    </div>
+                    <div class="form-group col-md-4" style="margin:3px !important;">
+                        <label for="nombreCate">NOMBRE</label>
+                        <input type="text" class="form-control" id="nombreCate">
+                    </div>
+                    <div class="form-group col-md-4" style="margin:3px !important;">
+                        <label for="descripcion">DESCRIPCIÓN</label>
+                        <input type="text" class="form-control" id="descripcion">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="background-color: white;">
+            <div class="row" style="margin-top: 10px !important; padding-bottom: 15px !important;">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-outline-success" style="width: 100px !important; margin:3px;"
+                        onclick="guardarInformacionCategoria()">Guardar</button>
+                    <button class="btn btn-outline-success" style="width: 100px !important; margin:3px;"
+                        onclick="editarInformacionCategoria()">Actualizar</button>
+                    <button class="btn btn-outline-success" style="width: 100px !important; margin:3px;"
+                        onclick="limpiarElementoCategoria()">Limpiar</button>
+                </div>
+            </div>
+            <div class="container" style="background-color: white;">
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <a href="index.html" id="regresar" class="btn btn-dark"
+                            style="width: 100px !important; margin:3px;">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

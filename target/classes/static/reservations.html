@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/functions.js"></script>
+    <title>MOTO´S DATA BASES</title>
+</head>
+
+<body style="background-color:#e7e5e5">
+    <script type="text/javascript">
+        window.onload = traerInformacionReserva();
+    </script>
+
+
+    <div class="container">
+        <div class="row" style="background-color:#135C55">
+            <div class="d-flex justify-content-center">
+                <h1 style="color:white">MOTO´S DATA BASES</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" style="background-color:#23A89B">
+            <div class="d-flex justify-content-center">
+                <h3 style="color:white">RESERVATION MANAGER</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="background-color: white; padding-bottom: 15px;">
+        <div class="row" style="margin-top: 10px !important; padding-bottom: 15px !important;">
+            <div class="d-flex justify-content-center">
+                <div class="col-md-2 mt-2">
+                    <div class="d-flex justify-content-center">
+                        <a class="thumbnail" href="#">
+                            <img class="img-responsive" src="./images/logo.png" alt="" style="height: 100px;">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-10 mt-3">
+                    <div class="d-flex justify-content-center">
+                        <div class="row">
+                            <div class="col-md-12" id="resultado5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="background-color: white;">
+            <div class="row" style="margin-top: 10px !important; padding-bottom: 15px !important;">
+                <div class="d-flex justify-content-center">
+                    <div class="col-sm-10">
+                        <table class=table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">COD</th>
+                                    <th scope="col">ENTREGA</th>
+                                    <th scope="col">DEVOLUCION</th>
+                                    <th scope="col">CLIENTE</th>
+                                    <th scope="col">MOTO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><input type="number" id="idReservacion" class="form-control"
+                                            readonly hidden="false"></th>
+                                    <th><input type="date" class="form-control" id="fechaInico"></th>
+                                    <th><input type="date" class="form-control" id="fechaDevo"></th>
+                                    <th><select id="relacion-cliente" class="form-select"></select></th>
+                                    <th><select id="relacion-moto" class="form-select"></select></th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" style="background-color: white;">
+                <div class="row" style="margin-top: 10px !important; padding-bottom: 15px !important;">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-outline-success" style="width: 120px !important; margin:3px;"
+                            onclick="guardarInformacionReserva()">Guardar</button>
+                        <button class="btn btn-outline-success" style="width: 120px !important; margin:3px;"
+                            onclick="editarInformacionReserva()">Actualizar</button>
+                        <button class="btn btn-outline-success" style="width: 120px !important; margin:3px;"
+                            onclick="limpiarElementoReserva()">Limpiar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="container" style="background-color: white;">
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <a href="index.html" id="regresar" class="btn btn-dark"
+                            style="width: 120px !important; margin:3px;">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
